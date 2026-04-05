@@ -66,9 +66,21 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             object-position: 50% 50%;
             z-index: 1;
+        }
+        
+        .hero-fg-image {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            z-index: 2;
+            pointer-events: none;
         }
         
         .hero-overlay {
@@ -77,13 +89,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
-            z-index: 2;
+            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.3));
+            z-index: 3;
         }
         
         .hero-content {
             position: relative;
-            z-index: 3;
+            z-index: 4;
             width: 100%;
         }
         
@@ -395,7 +407,8 @@
     </header>
 
     <section class="hero">
-        <img src="hero.jpg" alt="Beachtune" class="hero-bg-image">
+        <img src="hero.jpg" alt="Beachtune Background" class="hero-bg-image">
+        <img src="hero.jpg" alt="Beachtune" class="hero-fg-image">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="container">
